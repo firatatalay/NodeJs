@@ -2,7 +2,12 @@ var path = require('path');
 
 
 module.exports.index =  function(req,res){
+    res.render('elektronik');
+    
+}
 
+
+module.exports.bilgisayar = function(req,res){
     var kisiler=['Ahmet','Mehmet','Veli'];
 
     res.render('bilgisayar', { 
@@ -10,10 +15,5 @@ module.exports.index =  function(req,res){
         mesaj:'Merhaba ben controller.',
         kisiler: kisiler
     });
-}
-
-
-module.exports.bilgisayar = function(req,res){
-    res.sendFile(path.join(__dirname, '../../login.html'));
 }
 
