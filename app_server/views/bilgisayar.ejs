@@ -3,8 +3,21 @@
     <h2> Bilgisayar! </h2>
     <h3> <%= mesaj %> </h3>
 
-    <ul>
-    <% for(var i=0;i<kisiler.length;i++) { %>
-       <li> <%=kisiler[i]%> </li>
-    <% } %> 
-    </ul>
+ 
+
+
+<div class="container">
+    <div class="row">
+
+        <% for(var i=0;i<kisiler.length;i++) { %>
+
+        <div class="col-sm-3 denemeBuyuk">
+            <%=kisiler[i]%>
+        </div>
+        <% } %> 
+<br>
+        Merhaba!
+
+        
+    </div>
+</div>

@@ -8,7 +8,7 @@ module.exports.index =  function(req,res){
 
 
 module.exports.bilgisayar = function(req,res){
-    var kisiler=['Ahmet','Mehmet','Veli'];
+    var kisiler=['Ahmet','Mehmet','Veli','Şaban'];
 
     res.render('bilgisayar', { 
         
