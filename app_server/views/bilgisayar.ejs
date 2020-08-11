@@ -2,8 +2,14 @@
 
 <body>
     
-    <h1> Login</h1>
-    <h2> Page</h2>
+    <h1> EJS </h1>
+    <h2> Bilgisayar! </h2>
+    <h3> <%= mesaj %> </h3>
 
+    <ul>
+    <% for(var i=0;i<kisiler.length;i++) { %>
+       <li> <%=kisiler[i]%> </li>
+    <% } %> 
+    </ul>
 </body>
 </html>

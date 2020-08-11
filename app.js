@@ -7,6 +7,9 @@ var  express = require('express');
 var app = express();
 var path = require('path');
 
+app.set('view engine', 'ejs');
+app.set('views',path.join(__dirname, '/app_server/views'));
+
 var routeElektronik = require('./app_server/routes/elektronikRoute');
 
 app.use('/public',  express.static(path.join(__dirname, 'public')))
