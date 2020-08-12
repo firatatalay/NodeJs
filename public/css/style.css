@@ -3,3 +3,10 @@
     background-color: coral;
     margin: 1px;
 }
+
+.loginPanel{
+    width: 320px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
