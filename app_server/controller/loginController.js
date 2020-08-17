@@ -27,13 +27,13 @@ module.exports.signupPost = function(req,res){
             ad:req.body.name,
             soyad:req.body.surname,
             email:req.body.inputEmail,
-            kullaniciadi:req.body.username,
+            kullaniciAdi:req.body.username,
             sifre:req.body.inputPassword
         });
         yeniKullanici.save();
         console.log(yeniKullanici);
     
-        res.render('signup');
+        res.render('login');
     } catch (error) {
         console.log(error);
     }
