@@ -10,3 +10,21 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+  }
+  
+  .btn:hover, .dropdown:hover .btn {
+    background-color: #0b7dda;
+  }
