@@ -6,6 +6,8 @@ var path = require('path');
 var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
 
+
+
 var db = require('./app_server/models/db');
 
 app.set('view engine', 'ejs');

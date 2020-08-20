@@ -1,2 +1,72 @@
-<h1> Anasayfa </h1>
+<div class="container">    
 
+<!-- <h1> Anasayfa </h1>
+
+<button class="btn btn-danger" id="tag"> buton test</button>
+
+
+<div onMouseUp="demo()"> Hello World!  </div>
+
+<script>
+    function demo() {
+        let txt = "";
+            if (window.getSelection) {
+                    txt = window.getSelection();
+            }
+            else if (document.getSelection) {
+                txt = document.getSelection();
+            } else if (document.selection) {
+                txt = document.selection.createRange().text;
+            }
+            alert(txt);
+    }
+</script> -->
+
+<button class="btn style" type="button" />TAG 1</button>
+<button class="btn loc" type="button" />TAG 2</button>
+<button class="btn style" type="button" />TAG 3</button>
+<button class="btn style" type="button" />TAG 4</button>
+<br>
+
+<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+</script>
+
+<span class="">
+    Barack Hussein Obama II (born August 4, 1961) is an American attorney and politician 
+    who served as the 44th President of the United States from January 20, 2009, to 
+    January 20, 2017. A member of the Democratic Party, he was the first African 
+    American to serve as president. He was previously a United States Senator from 
+    Illinois and a member of the Illinois State Senate.
+</span><br>
+
+<script>
+    $(function() {
+        $('.style').on('click', function() {
+            var selectionSpan = selection();
+            selectionSpan.style.background="red";
+            // $('.changeText1').css({"background":"red"});
+        });
+        $('.loc').on('click', function() {
+            var selectionSpan = selection();
+            selectionSpan.style.background="blue";
+            // $('.changeText2').css({"background":"purple"});
+        });
+    });
+    function selection() {
+        try {
+            if (window.ActiveXObject) { return document.selection.createRange().htmlText; }
+            var span = document.createElement("span");
+            // span.className = 'changeText1';
+            getSelection().getRangeAt(0).surroundContents(span);
+            return span;
+        } catch (e) {
+            if (window.ActiveXObject) { return document.selection.createRange(); }
+            return getSelection();
+        }
+    }
+
+</script> 
+</div>
