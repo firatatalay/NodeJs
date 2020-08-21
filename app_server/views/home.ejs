@@ -24,41 +24,59 @@
     $(function() {
         $('.person').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="blue";
-            // $('.changeText1').css({"background":"red"});
         });
         $('.location').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="gray";
-            // $('.changeText2').css({"background":"purple"});
         });
         $('.organization').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="green";
-            // $('.changeText2').css({"background":"purple"});
         });
         $('.event').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="red";
-            // $('.changeText2').css({"background":"purple"});
         });
         $('.date').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="orange";
-            // $('.changeText2').css({"background":"purple"});
         });
         $('.other').on('click', function() {
             var selectionSpan = selection();
+            var button = document.createElement("button");
+            button.innerHTML='X';
+            button.className="cross dot";
+            selectionSpan.appendChild(button);
             selectionSpan.style.background="#17a2b8";
-            // $('.changeText2').css({"background":"purple"});
         });
     });
     function selection() {
         try {
             if (window.ActiveXObject) { return document.selection.createRange().htmlText; }
             var span = document.createElement("span");
-            // span.className = 'changeText1';
             getSelection().getRangeAt(0).surroundContents(span);
+            
             return span;
         } catch (e) {
             if (window.ActiveXObject) { return document.selection.createRange(); }
