@@ -29,6 +29,7 @@
             button.className="cross dot";
             selectionSpan.appendChild(button);
             selectionSpan.style.background="blue";
+            button.onclick  = delSelection();
         });
         $('.location').on('click', function() {
             var selectionSpan = selection();
@@ -84,5 +85,17 @@
         }
     }
 
+    function delSelection(){
+        try{
+            if (window.ActiveXObject) { return document.selection.createRange().htmlText; }
+            var span = document.createElement("span");
+            span.removeRange(span.getRangeAt(0));
+            return getSelection();
+        }
+        catch (e) {
+            if(window.ActiveXObject) { return document.selection.createRange();}
+            return  getSelection();
+        }
+    }
 </script> 
 </div>
